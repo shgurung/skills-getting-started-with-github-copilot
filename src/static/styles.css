@@ -79,6 +79,15 @@ section h3 {
   margin-top: 10px;
 }
 
+.participants-list {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.participants-list li {
+  margin-bottom: 5px;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
@@ -138,6 +147,10 @@ button:hover {
 }
 
 .hidden {
+  display: none;
+}
+
+#participants-container {
   display: none;
 }
 

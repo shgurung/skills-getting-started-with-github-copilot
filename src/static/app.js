@@ -16,12 +16,16 @@ async function fetchActivities() {
 
       const spotsLeft = details.max_participants - details.participants.length;
 
+      const participantsList = details.participants.length
+        ? `<ul class="participants-list">${details.participants.map(participant => `<li>${participant}</li>`).join("")}</ul>`
+        : "None";
+
       activityCard.innerHTML = `
         <h4>${name}</h4>
         <p>${details.description}</p>
         <p><strong>Schedule:</strong> ${details.schedule}</p>
         <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
-        <p><strong>Participants:</strong> ${details.participants.join(", ") || "None"}</p>
+        <p><strong>Participants:</strong> ${participantsList}</p>
       `;
 
       activitiesList.appendChild(activityCard);
@@ -61,12 +65,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const spotsLeft = details.max_participants - details.participants.length;
 
+        const participantsList = details.participants.length
+          ? `<ul class="participants-list">${details.participants.map(participant => `<li>${participant}</li>`).join("")}</ul>`
+          : "None";
+
         activityCard.innerHTML = `
           <h4>${name}</h4>
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
-          <p><strong>Participants:</strong> ${details.participants.join(", ") || "None"}</p>
+          <p><strong>Participants:</strong> ${participantsList}</p>
         `;
 
         activitiesList.appendChild(activityCard);
@@ -144,12 +152,16 @@ async function fetchActivities() {
 
       const spotsLeft = details.max_participants - details.participants.length;
 
+      const participantsList = details.participants.length
+        ? `<ul class="participants-list">${details.participants.map(participant => `<li>${participant}</li>`).join("")}</ul>`
+        : "None";
+
       activityCard.innerHTML = `
         <h4>${name}</h4>
         <p>${details.description}</p>
         <p><strong>Schedule:</strong> ${details.schedule}</p>
         <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
-        <p><strong>Participants:</strong> ${details.participants.join(", ") || "None"}</p>
+        <p><strong>Participants:</strong> ${participantsList}</p>
       `;
 
       activitiesList.appendChild(activityCard);
@@ -189,11 +201,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const spotsLeft = details.max_participants - details.participants.length;
 
+        const participantsList = details.participants.length
+          ? `<ul class="participants-list">${details.participants.map(participant => `<li>${participant}</li>`).join("")}</ul>`
+          : "None";
+
         activityCard.innerHTML = `
           <h4>${name}</h4>
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
+          <p><strong>Participants:</strong> ${participantsList}</p>
         `;
 
         activitiesList.appendChild(activityCard);
